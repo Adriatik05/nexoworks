@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Calendar, Check, Clock, Minus, Plus, Star } from 'lucide-react'
+import { ArrowUpRight, Calendar, Check, Clock, Minus, Plus, Star } from 'lucide-react'
 
 /* Each preview is wrapped in its demo theme so the hub literally previews
    the product's own palette, type and radius — four distinct experiences. */
