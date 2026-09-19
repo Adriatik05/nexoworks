@@ -123,20 +123,28 @@ export function AureaPreview() {
 }
 
 export function NewDemoPreview({ name, label, accent }: { name: string; label: string; accent: string }) {
+  const config = {
+    'AutoHaus': { image: '/autoh aus/hero.png', tint: 'bg-[#ecebe6]', stat: '€42,900', detail: 'BMW 530d xDrive · 2021' },
+    'Oris Dental': { image: '/oris/hero.png', tint: 'bg-[#e8f0ea]', stat: '14:30', detail: 'Appointment availability' },
+    'Forma Properties': { image: '/forma/hero.png', tint: 'bg-[#ece9df]', stat: '€320,000', detail: 'Penthouse Residence' },
+    'DriveCare': { image: '/drivecare/hero.png', tint: 'bg-[#e5eef0]', stat: '€69', detail: 'Oil & Filter Service' },
+    Northline: { image: '/drivecare/hero.png', tint: 'bg-[#f0ede7]', stat: '€2,840', detail: "Today's revenue" },
+  }[name as 'AutoHaus' | 'Oris Dental' | 'Forma Properties' | 'DriveCare' | 'Northline']
   return (
-    <div className="overflow-hidden rounded-xl border border-border bg-white shadow-sm">
-      <div className="flex items-center justify-between border-b border-border px-4 py-3">
+    <div className={`overflow-hidden border border-border shadow-sm ${config?.tint ?? 'bg-white'}`}>
+      <div className="flex items-center justify-between border-b border-black/10 px-4 py-3">
         <span className="text-sm font-semibold tracking-tight text-slate-900">{name}</span>
-        <span className="text-[10px] uppercase tracking-widest text-slate-400">{label}</span>
+        <span className="text-[10px] uppercase tracking-widest text-slate-500">{label}</span>
       </div>
-      <div className="grid grid-cols-3 gap-2 bg-slate-50 p-4">
-        {[accent, 'Online booking', 'Customer portal'].map((item, i) => (
-          <div key={item} className="border border-slate-200 bg-white p-3">
-            <div className={`h-1.5 w-8 ${i === 0 ? 'bg-slate-900' : 'bg-slate-200'}`} />
-            <p className="mt-5 text-[11px] font-medium text-slate-800">{item}</p>
-            <p className="mt-1 text-[10px] text-slate-400">Live experience</p>
-          </div>
-        ))}
+      <div className="grid gap-0 sm:grid-cols-[1.15fr_.85fr]">
+        <div className="relative min-h-40 overflow-hidden bg-black/10 sm:min-h-48">
+          <Image src={config?.image ?? '/drivecare/hero.png'} alt={`${name} product preview`} fill sizes="(max-width: 768px) 100vw, 35vw" className="object-cover transition duration-500 hover:scale-105" />
+          <span className="absolute bottom-3 left-3 bg-white/90 px-2 py-1 text-[9px] uppercase tracking-widest text-slate-700">Live product</span>
+        </div>
+        <div className="flex flex-col justify-between bg-white/80 p-4 backdrop-blur-sm">
+          <div><p className="text-[10px] uppercase tracking-widest text-slate-400">{accent}</p><p className="mt-5 text-2xl font-medium tracking-tight text-slate-900">{config?.stat}</p><p className="mt-1 text-[11px] text-slate-500">{config?.detail}</p></div>
+          <div className="mt-7 flex items-center justify-between border-t border-slate-200 pt-3 text-[10px] text-slate-500"><span>Explore flow</span><ArrowUpRight className="size-3.5 text-slate-900" /></div>
+        </div>
       </div>
     </div>
   )

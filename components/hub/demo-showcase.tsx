@@ -23,15 +23,14 @@ export function DemoShowcase() {
         <div className="flex flex-col gap-4 py-14 md:flex-row md:items-end md:justify-between md:py-20">
           <div>
             <p className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
-              Katër produkte të vërteta
+              Nëntë produkte të vërteta
             </p>
             <h2 className="mt-3 max-w-2xl text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-              Explore four live client products
+              Explore nine live client products
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Secili demo është ndërtuar plotësisht — jo pamje statike. Klikoni dhe
-            provoni rrjedhën e vërtetë të rezervimit ose blerjes.
+            Secili demo është ndërtuar si një produkt real — me identitet, rrjedha dhe ndërveprime të menduara për biznesin që e përdor.
           </p>
         </div>
       </div>
