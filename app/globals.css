@@ -1,0 +1,181 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+}
+
+/* ---------- NexoWorks base (monochrome, Linear/Vercel-like) ---------- */
+:root {
+  color-scheme: light;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.16 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.16 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.16 0 0);
+  --primary: oklch(0.18 0 0);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.968 0 0);
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: oklch(0.972 0 0);
+  --muted-foreground: oklch(0.52 0 0);
+  --accent: oklch(0.968 0 0);
+  --accent-foreground: oklch(0.2 0 0);
+  --brand: oklch(0.55 0.19 264);
+  --brand-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.7 0 0);
+  --radius: 0.7rem;
+}
+
+/* ---------- AROMA — restaurant, Prishtina (warm paper + forest) ---------- */
+.theme-aroma {
+  color-scheme: light;
+  --background: oklch(0.985 0.006 95);
+  --foreground: oklch(0.22 0.012 150);
+  --card: oklch(0.995 0.004 95);
+  --card-foreground: oklch(0.22 0.012 150);
+  --popover: oklch(0.995 0.004 95);
+  --popover-foreground: oklch(0.22 0.012 150);
+  --primary: oklch(0.35 0.045 155);
+  --primary-foreground: oklch(0.985 0.01 95);
+  --secondary: oklch(0.955 0.012 95);
+  --secondary-foreground: oklch(0.3 0.02 150);
+  --muted: oklch(0.955 0.012 95);
+  --muted-foreground: oklch(0.48 0.02 140);
+  --accent: oklch(0.93 0.02 120);
+  --accent-foreground: oklch(0.3 0.03 150);
+  --brand: oklch(0.48 0.07 150);
+  --brand-foreground: oklch(0.985 0.01 95);
+  --border: oklch(0.9 0.012 100);
+  --input: oklch(0.9 0.012 100);
+  --ring: oklch(0.48 0.07 150);
+  --radius: 0.4rem;
+}
+
+/* ---------- E.K. Studio — salon, Ferizaj (soft stone + aubergine) ---------- */
+.theme-ek {
+  color-scheme: light;
+  --background: oklch(0.99 0.004 20);
+  --foreground: oklch(0.2 0.01 350);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.01 350);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.01 350);
+  --primary: oklch(0.38 0.07 350);
+  --primary-foreground: oklch(0.99 0.004 20);
+  --secondary: oklch(0.965 0.008 350);
+  --secondary-foreground: oklch(0.3 0.03 350);
+  --muted: oklch(0.966 0.008 350);
+  --muted-foreground: oklch(0.5 0.02 350);
+  --accent: oklch(0.93 0.02 350);
+  --accent-foreground: oklch(0.32 0.05 350);
+  --brand: oklch(0.5 0.11 355);
+  --brand-foreground: oklch(0.99 0.004 20);
+  --border: oklch(0.912 0.008 350);
+  --input: oklch(0.912 0.008 350);
+  --ring: oklch(0.5 0.11 355);
+  --radius: 1rem;
+}
+
+/* ---------- Villa Aurea — hotel, Albanian Riviera (sand + deep sea) ---------- */
+.theme-aurea {
+  color-scheme: light;
+  --background: oklch(0.98 0.01 80);
+  --foreground: oklch(0.24 0.02 220);
+  --card: oklch(0.995 0.006 80);
+  --card-foreground: oklch(0.24 0.02 220);
+  --popover: oklch(0.995 0.006 80);
+  --popover-foreground: oklch(0.24 0.02 220);
+  --primary: oklch(0.36 0.05 220);
+  --primary-foreground: oklch(0.985 0.01 80);
+  --secondary: oklch(0.955 0.016 80);
+  --secondary-foreground: oklch(0.3 0.03 220);
+  --muted: oklch(0.955 0.016 80);
+  --muted-foreground: oklch(0.47 0.025 210);
+  --accent: oklch(0.92 0.03 190);
+  --accent-foreground: oklch(0.3 0.04 220);
+  --brand: oklch(0.5 0.08 205);
+  --brand-foreground: oklch(0.985 0.01 80);
+  --border: oklch(0.9 0.016 90);
+  --input: oklch(0.9 0.016 90);
+  --ring: oklch(0.5 0.08 205);
+  --radius: 0.3rem;
+}
+
+/* ---------- FORMÉ — streetwear (stark monochrome, brutalist) ---------- */
+.theme-forme {
+  color-scheme: light;
+  --background: oklch(0.995 0 0);
+  --foreground: oklch(0.13 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.13 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.13 0 0);
+  --primary: oklch(0.13 0 0);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.13 0 0);
+  --muted: oklch(0.965 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.94 0 0);
+  --accent-foreground: oklch(0.13 0 0);
+  --brand: oklch(0.13 0 0);
+  --brand-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0 0);
+  --input: oklch(0.9 0 0);
+  --ring: oklch(0.13 0 0);
+  --radius: 0rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@utility grid-bg {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
