@@ -124,11 +124,11 @@ export function AureaPreview() {
 
 export function NewDemoPreview({ name, label, accent }: { name: string; label: string; accent: string }) {
   const config = {
-    'AutoHaus': { image: '/autoh aus/hero.png', tint: 'bg-[#ecebe6]', stat: '€42,900', detail: 'BMW 530d xDrive · 2021' },
+    'AutoHaus': { image: '/autohaus/hero.png', tint: 'bg-[#ecebe6]', stat: '€42,900', detail: 'BMW 530d xDrive · 2021' },
     'Oris Dental': { image: '/oris/hero.png', tint: 'bg-[#e8f0ea]', stat: '14:30', detail: 'Appointment availability' },
     'Forma Properties': { image: '/forma/hero.png', tint: 'bg-[#ece9df]', stat: '€320,000', detail: 'Penthouse Residence' },
     'DriveCare': { image: '/drivecare/hero.png', tint: 'bg-[#e5eef0]', stat: '€69', detail: 'Oil & Filter Service' },
-    Northline: { image: '/drivecare/hero.png', tint: 'bg-[#f0ede7]', stat: '€2,840', detail: "Today's revenue" },
+    Northline: { tint: 'bg-[#eef2ee]', stat: '€2,840', detail: "Today's revenue" },
   }[name as 'AutoHaus' | 'Oris Dental' | 'Forma Properties' | 'DriveCare' | 'Northline']
   return (
     <div className={`overflow-hidden border border-border shadow-sm ${config?.tint ?? 'bg-white'}`}>
@@ -138,7 +138,20 @@ export function NewDemoPreview({ name, label, accent }: { name: string; label: s
       </div>
       <div className="grid gap-0 sm:grid-cols-[1.15fr_.85fr]">
         <div className="relative min-h-40 overflow-hidden bg-black/10 sm:min-h-48">
-          <Image src={config?.image ?? '/drivecare/hero.png'} alt={`${name} product preview`} fill sizes="(max-width: 768px) 100vw, 35vw" className="object-cover transition duration-500 hover:scale-105" />
+          {config?.image ? (
+            <Image src={config.image} alt={`${name} product preview`} fill sizes="(max-width: 768px) 100vw, 35vw" className="object-cover transition duration-500 hover:scale-105" />
+          ) : (
+            <div className="absolute inset-0 bg-[#f8faf8] p-4">
+              <div className="flex items-center justify-between border-b border-[#202522]/10 pb-3">
+                <span className="text-[9px] font-semibold tracking-tight text-[#202522]">northline<span className="text-[#7b9c87]">.</span></span>
+                <span className="text-[8px] text-[#202522]/40">Dashboard</span>
+              </div>
+              <div className="mt-4 grid grid-cols-2 gap-2">
+                {['€2,840', '47', '126', '€60.40'].map((value) => <div key={value} className="border border-[#202522]/10 bg-white p-2"><div className="h-1 w-8 bg-[#202522]/15" /><p className="mt-3 text-sm font-medium text-[#202522]">{value}</p></div>)}
+              </div>
+              <div className="mt-3 h-10 border border-[#202522]/10 bg-white p-2"><div className="h-full w-2/3 bg-[#dce9df]" /></div>
+            </div>
+          )}
           <span className="absolute bottom-3 left-3 bg-white/90 px-2 py-1 text-[9px] uppercase tracking-widest text-slate-700">Live product</span>
         </div>
         <div className="flex flex-col justify-between bg-white/80 p-4 backdrop-blur-sm">
