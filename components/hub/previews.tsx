@@ -122,6 +122,26 @@ export function AureaPreview() {
   )
 }
 
+export function NewDemoPreview({ name, label, accent }: { name: string; label: string; accent: string }) {
+  return (
+    <div className="overflow-hidden rounded-xl border border-border bg-white shadow-sm">
+      <div className="flex items-center justify-between border-b border-border px-4 py-3">
+        <span className="text-sm font-semibold tracking-tight text-slate-900">{name}</span>
+        <span className="text-[10px] uppercase tracking-widest text-slate-400">{label}</span>
+      </div>
+      <div className="grid grid-cols-3 gap-2 bg-slate-50 p-4">
+        {[accent, 'Online booking', 'Customer portal'].map((item, i) => (
+          <div key={item} className="border border-slate-200 bg-white p-3">
+            <div className={`h-1.5 w-8 ${i === 0 ? 'bg-slate-900' : 'bg-slate-200'}`} />
+            <p className="mt-5 text-[11px] font-medium text-slate-800">{item}</p>
+            <p className="mt-1 text-[10px] text-slate-400">Live experience</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function FormePreview() {
   return (
     <div className="theme-forme border border-border bg-background font-sans">

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import { demos } from '@/lib/demos'
-import { AromaPreview, EkPreview, AureaPreview, FormePreview } from './previews'
+import { AromaPreview, EkPreview, AureaPreview, FormePreview, NewDemoPreview } from './previews'
 import { cn } from '@/lib/utils'
 
 const previewMap: Record<string, React.ReactNode> = {
@@ -9,6 +9,11 @@ const previewMap: Record<string, React.ReactNode> = {
   'ek-studio': <EkPreview />,
   'villa-aurea': <AureaPreview />,
   forme: <FormePreview />,
+  autohaus: <NewDemoPreview name="AutoHaus" label="Vehicle inventory" accent="Featured vehicles" />,
+  'oris-dental': <NewDemoPreview name="Oris Dental" label="Appointments" accent="Treatments" />,
+  'forma-properties': <NewDemoPreview name="Forma Properties" label="Property discovery" accent="Curated listings" />,
+  drivecare: <NewDemoPreview name="DriveCare" label="Custom tool" accent="Service booking" />,
+  northline: <NewDemoPreview name="Northline" label="Internal software" accent="Revenue overview" />,
 }
 
 export function DemoShowcase() {

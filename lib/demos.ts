@@ -64,4 +64,19 @@ export const demos: Demo[] = [
       'A streetwear storefront with filtering, product pages, cart and cash-on-delivery checkout.',
     accentLabel: 'Online store',
   },
+  {
+    slug: 'autohaus', index: '05', name: 'AutoHaus', category: 'Automotive dealership', location: 'Prishtinë, Kosovë', href: '/autohaus', theme: 'theme-auto', tagline: 'Find your next car.', description: 'A premium vehicle inventory and test-drive system for a modern dealership.', accentLabel: 'Vehicle inventory',
+  },
+  {
+    slug: 'oris-dental', index: '06', name: 'Oris Dental', category: 'Healthcare booking', location: 'Prishtinë, Kosovë', href: '/oris-dental', theme: 'theme-oris', tagline: 'Modern dentistry. Personal care.', description: 'A calm healthcare website with treatments, doctors and appointment booking.', accentLabel: 'Appointments',
+  },
+  {
+    slug: 'forma-properties', index: '07', name: 'Forma Properties', category: 'Real estate platform', location: 'Prishtinë, Kosovë', href: '/forma-properties', theme: 'theme-forma', tagline: 'Find a place that feels like yours.', description: 'A premium property discovery platform with listings, search and map view.', accentLabel: 'Property discovery',
+  },
+  {
+    slug: 'drivecare', index: '08', name: 'DriveCare', category: 'Service center portal', location: 'Ferizaj, Kosovë', href: '/drivecare', theme: 'theme-drive', tagline: 'Service that keeps you moving.', description: 'A booking system and customer vehicle portal for an automotive service center.', accentLabel: 'Custom tool',
+  },
+  {
+    slug: 'northline', index: '09', name: 'Northline Hospitality', category: 'Business operations', location: 'Kosovë', href: '/northline', theme: 'theme-northline', tagline: 'Run the room behind the room.', description: 'A responsive operations dashboard for bookings, staff, inventory and reporting.', accentLabel: 'Internal software',
+  },
 ]
