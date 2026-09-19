@@ -1,2 +1,11 @@
-import { FormaProperties } from '@/components/new-demos'
-export default function Page() { return <FormaProperties /> }
+import { DemoFrame } from '@/components/demo-frame'
+import { FormaPropertiesApp } from '@/components/forma/forma-properties'
+
+export default function Page() {
+  return (
+    <>
+      <DemoFrame label="Forma Properties" />
+      <FormaPropertiesApp />
+    </>
+  )
+}

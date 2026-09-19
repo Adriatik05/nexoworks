@@ -58,6 +58,7 @@ export function Booking() {
   const [time, setTime] = useState<string | null>(null)
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
   const [done, setDone] = useState(false)
 
   const svc = SERVICES.find((s) => s.id === service)
@@ -68,7 +69,7 @@ export function Booking() {
     (step === 0 && !!service) ||
     (step === 1 && !!staff) ||
     (step === 2 && !!dateKey && !!time) ||
-    (step === 3 && name.trim().length > 1 && phone.trim().length >= 6)
+    (step === 3 && name.trim().length > 1 && phone.trim().length >= 6 && email.includes('@'))
 
   if (done) {
     return (
@@ -284,6 +285,19 @@ export function Booking() {
                 onChange={(e) => setPhone(e.target.value)}
                 inputMode="tel"
                 placeholder="+383 4_ ___ ___"
+                className="mt-2 h-11 w-full rounded-xl border border-border bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
+              />
+            </div>
+            <div>
+              <label htmlFor="ek-email" className="text-sm font-medium text-foreground">
+                Emaili
+              </label>
+              <input
+                id="ek-email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                placeholder="rina@example.com"
                 className="mt-2 h-11 w-full rounded-xl border border-border bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
               />
             </div>

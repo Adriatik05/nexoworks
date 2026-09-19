@@ -1,2 +1,11 @@
-import { DriveCare } from '@/components/new-demos'
-export default function Page() { return <DriveCare /> }
+import { DemoFrame } from '@/components/demo-frame'
+import { DriveCareApp } from '@/components/drivecare/drivecare'
+
+export default function Page() {
+  return (
+    <>
+      <DemoFrame label="DriveCare" />
+      <DriveCareApp />
+    </>
+  )
+}

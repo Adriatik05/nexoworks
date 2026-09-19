@@ -1,2 +1,11 @@
-import { OrisDental } from '@/components/new-demos'
-export default function Page() { return <OrisDental /> }
+import { DemoFrame } from '@/components/demo-frame'
+import { OrisDentalApp } from '@/components/oris/oris-dental'
+
+export default function Page() {
+  return (
+    <>
+      <DemoFrame label="Oris Dental" />
+      <OrisDentalApp />
+    </>
+  )
+}

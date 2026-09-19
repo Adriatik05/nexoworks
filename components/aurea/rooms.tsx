@@ -174,6 +174,8 @@ function BookingForm({ room }: { room: Room }) {
   const [checkIn, setCheckIn] = useState(todayISO(1))
   const [checkOut, setCheckOut] = useState(todayISO(3))
   const [guests, setGuests] = useState(2)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
   const [done, setDone] = useState(false)
 
   const nights = Math.max(
@@ -181,7 +183,7 @@ function BookingForm({ room }: { room: Room }) {
     Math.round((new Date(checkOut).getTime() - new Date(checkIn).getTime()) / 86400000),
   )
   const total = nights * room.price
-  const valid = nights > 0
+  const valid = nights > 0 && name.trim().length > 1 && email.includes('@')
 
   if (done) {
     return (
@@ -250,6 +252,28 @@ function BookingForm({ room }: { room: Room }) {
           ))}
         </select>
       </label>
+
+      <div className="mt-4 grid gap-3 border-t border-border pt-4">
+        <label className="text-sm">
+          <span className="text-muted-foreground">Guest name</span>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Your full name"
+            className="mt-1.5 h-10 w-full rounded-sm border border-border bg-background px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-primary"
+          />
+        </label>
+        <label className="text-sm">
+          <span className="text-muted-foreground">Email</span>
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="you@example.com"
+            className="mt-1.5 h-10 w-full rounded-sm border border-border bg-background px-3 text-sm text-foreground outline-none placeholder:text-muted-foreground/60 focus:border-primary"
+          />
+        </label>
+      </div>
 
       <dl className="mt-5 space-y-2 border-t border-border pt-4 text-sm">
         <div className="flex items-center justify-between">
