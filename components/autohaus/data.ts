@@ -30,7 +30,7 @@ export const vehicles: Vehicle[] = [
     hp: 286,
     drivetrain: '4WD',
     interior: 'Leather · Climate control',
-    image: '/autohaus/hero.png',
+    image: '/autohaus/bmw-530d.png',
   },
   {
     id: 'merc-e220d',
@@ -46,7 +46,7 @@ export const vehicles: Vehicle[] = [
     hp: 194,
     drivetrain: 'RWD',
     interior: 'Leather · Panoramic roof',
-    image: '/autohaus/hero.png',
+    image: '/autohaus/mercedes-e220d.png',
   },
   {
     id: 'audi-a6',
@@ -62,7 +62,7 @@ export const vehicles: Vehicle[] = [
     hp: 204,
     drivetrain: '4WD',
     interior: 'Leather · Bang & Olufsen',
-    image: '/autohaus/hero.png',
+    image: '/autohaus/audi-a6.png',
   },
   {
     id: 'porsche-macan',
@@ -78,7 +78,7 @@ export const vehicles: Vehicle[] = [
     hp: 261,
     drivetrain: '4WD',
     interior: 'Sport leather · Panoramic',
-    image: '/autohaus/hero.png',
+    image: '/autohaus/porsche-macan.png',
   },
   {
     id: 'volvo-xc60',

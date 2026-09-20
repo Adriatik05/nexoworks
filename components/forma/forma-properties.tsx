@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { ArrowRight, BedDouble, Bath, Maximize, Heart, MapPin, Check, X } from 'lucide-react'
 
 const properties = [
-  { name: 'Modern Apartment', place: 'Ulpiana · Prishtina', price: '€165,000', beds: 2, baths: 2, size: '98 m²', image: '/forma/hero.png' },
-  { name: 'Penthouse Residence', place: 'Veternik · Prishtina', price: '€320,000', beds: 3, baths: 3, size: '182 m²', image: '/forma/hero.png' },
-  { name: 'Family House', place: 'Ferizaj', price: '€245,000', beds: 4, baths: 3, size: '260 m²', image: '/forma/hero.png' },
+  { name: 'Modern Apartment', place: 'Ulpiana · Prishtina', price: '€165,000', beds: 2, baths: 2, size: '98 m²', image: '/forma/modern-apartment.png' },
+  { name: 'Penthouse Residence', place: 'Veternik · Prishtina', price: '€320,000', beds: 3, baths: 3, size: '182 m²', image: '/forma/penthouse.png' },
+  { name: 'Family House', place: 'Ferizaj', price: '€245,000', beds: 4, baths: 3, size: '260 m²', image: '/forma/family-house.png' },
 ]
 
 export function FormaPropertiesApp() {

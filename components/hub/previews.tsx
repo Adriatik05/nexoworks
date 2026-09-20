@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ArrowUpRight, Calendar, Check, Clock, Minus, Plus, Star } from 'lucide-react'
 
 /* Each preview is wrapped in its demo theme so the hub literally previews
-   the product's own palette, type and radius — four distinct experiences. */
+   the product's own palette, type and radius — nine distinct experiences. */
 
 export function AromaPreview() {
   const slots = ['18:30', '19:00', '19:30', '20:00']

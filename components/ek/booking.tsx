@@ -284,7 +284,7 @@ export function Booking() {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 inputMode="tel"
-                placeholder="+383 4_ ___ ___"
+                placeholder="+383 44 123 456"
                 className="mt-2 h-11 w-full rounded-xl border border-border bg-background px-4 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground/60 focus:border-primary"
               />
             </div>

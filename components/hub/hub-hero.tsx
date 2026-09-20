@@ -40,7 +40,7 @@ export function HubHero() {
               {[
                 { k: 'Nga', v: '€690', s: 'projekt fillestar · jo €5,000+' },
                 { k: 'Dorëzim', v: '2–4 javë', s: 'nga brief te live' },
-                { k: 'Produkte', v: '4 demo', v2: 'live', s: 'restorant · sallon · hotel · dyqan' },
+                { k: 'Produkte', v: '9 demo', v2: 'live', s: 'restorant · sallon · hotel · dyqan · auto · klinikë · prona · servis · operacione' },
               ].map((row) => (
                 <div key={row.k} className="flex items-baseline justify-between gap-4 py-5 first:pt-0">
                   <div>

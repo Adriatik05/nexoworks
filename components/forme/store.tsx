@@ -496,7 +496,7 @@ function CheckoutView() {
                 inputMode="tel"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                placeholder="+383 4_ ___ ___"
+                placeholder="+383 44 123 456"
                 className="h-11 w-full border border-border bg-background px-3 text-sm text-foreground outline-none focus:border-foreground"
               />
             </Field>

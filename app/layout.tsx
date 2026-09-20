@@ -26,7 +26,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   title: 'NexoWorks — Digital products, built around your business',
   description:
-    'NexoWorks builds websites, booking systems and custom tools for small and mid-sized businesses across Kosovo and the Balkans. Explore four live client demos.',
+    'NexoWorks builds websites, booking systems and custom tools for small and mid-sized businesses across Kosovo and the Balkans. Explore nine live client demos.',
   generator: 'v0.app',
   icons: {
     icon: [
