@@ -22,7 +22,7 @@ export default function AromaPage() {
         <AromaMenu />
         <AromaInfo />
 
-        <section id="rezervo" className="border-t border-border">
+        <section id="rezervo" className="scroll-mt-28 border-t border-border">
           <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">

@@ -718,7 +718,7 @@ function AutoHausFooter() {
       <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6">
         <p className="text-base font-semibold text-foreground">AutoHaus</p>
         <p className="text-xs text-muted-foreground">
-          Prishtinë, Kosovë · +383 44 123 456 · © {new Date().getFullYear()}
+          Ferizaj, Kosovë · 048 599 499 · © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

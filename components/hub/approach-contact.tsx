@@ -67,10 +67,10 @@ export function ApproachContact() {
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
                 <a
-                  href="tel:+38344000000"
+                  href="tel:+38348599499"
                   className="inline-flex h-12 items-center justify-center rounded-lg border border-border px-6 text-sm font-medium text-foreground transition-colors hover:bg-muted"
                 >
-                  +383 44 000 000
+                  048 599 499
                 </a>
               </div>
             </div>

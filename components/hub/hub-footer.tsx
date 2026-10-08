@@ -37,8 +37,8 @@ export function HubFooter() {
             </p>
             <ul className="mt-4 space-y-2.5 text-sm text-foreground/80">
               <li>hello@nexoworks.co</li>
-              <li>+383 44 000 000</li>
-              <li>Prishtinë, Kosovë</li>
+              <li>048 599 499</li>
+              <li>Ferizaj, Kosovë</li>
             </ul>
           </div>
         </div>
