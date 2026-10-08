@@ -203,7 +203,7 @@ export function Booking() {
         {step === 2 && (
           <div>
             <p className="text-sm font-medium text-foreground">Zgjidh datën</p>
-            <div className="mt-3 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="mt-3 grid grid-cols-5 gap-2 sm:flex sm:gap-2 sm:overflow-x-auto sm:pb-2 sm:[scrollbar-width:none] sm:[&::-webkit-scrollbar]:hidden">
               {dates.map((d) => {
                 const active = d.key === dateKey
                 return (
