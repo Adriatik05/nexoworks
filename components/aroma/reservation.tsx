@@ -86,8 +86,8 @@ export function Reservation() {
           <p className="text-sm font-medium text-foreground">Zgjidh datën</p>
           <p className="text-sm text-muted-foreground">{selectedDate.label}</p>
         </div>
-        <div className="mt-3 flex gap-2 overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          {dates.map((d) => {
+        <div className="mt-3 grid grid-cols-4 gap-2">
+          {dates.slice(0, 4).map((d) => {
             const active = d.key === dateKey
             return (
               <button

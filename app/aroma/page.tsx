@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function AromaPage() {
   return (
-    <div className="theme-aroma min-h-screen bg-background font-sans text-foreground">
+    <div className="theme-aroma min-h-screen overflow-x-clip bg-background font-sans text-foreground">
       <DemoFrame label="AROMA" />
       <AromaNav />
       <main>
