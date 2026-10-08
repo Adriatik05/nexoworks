@@ -49,7 +49,7 @@ export function Reservation() {
           Rezervimi u konfirmua
         </h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          Ju kemi dërguar një konfirmim me email. Ju presim me kënaqësi.
+          Ju kemi dërguar konfirmimin në adresën tuaj elektronike. Ju presim me kënaqësi.
         </p>
         <dl className="mx-auto mt-8 max-w-xs divide-y divide-border border-y border-border text-left text-sm">
           <div className="flex items-center justify-between py-3">
@@ -79,7 +79,7 @@ export function Reservation() {
   }
 
   return (
-    <div className="rounded-md border border-border bg-card p-5 sm:p-7">
+    <div className="min-w-0 max-w-full overflow-hidden rounded-md border border-border bg-card p-5 sm:p-7">
       {/* Date */}
       <div>
         <div className="flex items-center justify-between">

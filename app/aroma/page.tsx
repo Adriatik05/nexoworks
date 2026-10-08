@@ -23,8 +23,8 @@ export default function AromaPage() {
         <AromaInfo />
 
         <section id="rezervo" className="scroll-mt-28 border-t border-border">
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-5">
+          <div className="mx-auto grid min-w-0 max-w-6xl gap-10 overflow-hidden px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-12 lg:gap-16">
+            <div className="min-w-0 lg:col-span-5">
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 Rezervim
               </p>
@@ -41,7 +41,7 @@ export default function AromaPage() {
                 <li>· Grupe të mëdha me kërkesë</li>
               </ul>
             </div>
-            <div className="lg:col-span-7">
+            <div className="min-w-0 lg:col-span-7">
               <Reservation />
             </div>
           </div>
